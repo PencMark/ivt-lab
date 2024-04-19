@@ -80,6 +80,13 @@ public class GT4500 implements SpaceShip {
         // try to fire both of the torpedo stores
         //TODO implement feature
 
+        if(!primaryTorpedoStore.isEmpty() && !secondaryTorpedoStore.isEmpty()){//Ha tudunk loni lovunk es ha mindketto sikeres loves volt akkor sikeresen lottunk
+          firingSuccess = primaryTorpedoStore.fire(1) && secondaryTorpedoStore.fire(1);
+        }
+        else{
+          firingSuccess = false; //kulonben nem volt sikeres
+        }
+
         break;
     }
 
